@@ -1,3 +1,4 @@
 import './styles.css';
-import './templating-menu';
-import './changeTheme';
+import './js/templating-menu';
+import './js/changeTheme';
+

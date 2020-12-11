@@ -1,5 +1,5 @@
-import templateMenu from '../templates/menu-template.hbs';
-import menu from '../src/menu.json';
+import templateMenu from '../../templates/menu-template.hbs';
+import menu from '../menu.json';
 
 const markupMenu = templateMenu(menu);
 
