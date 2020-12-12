@@ -4,6 +4,7 @@ const Theme = {
 }
 
 const bodyEl = document.querySelector('body');
+bodyEl.classList.add(Theme.LIGHT);
 const switchMarker = document.querySelector('#theme-switch-toggle');
 
 switchMarker.addEventListener('change', handleChangeTheme);
@@ -11,11 +12,13 @@ switchMarker.addEventListener('change', handleChangeTheme);
 function handleChangeTheme({target}){
     const { checked } = target; 
     
-    if(checked){ // проверяем в каком положении тумблер изменения темы, если выбрана темная, то checked = true
-        bodyEl.classList.add(Theme.DARK); 
-    } else {
-        bodyEl.classList.replace(Theme.DARK, Theme.LIGHT);
-    }
+    // if(checked){ // проверяем в каком положении тумблер изменения темы, если выбрана темная, то checked = true
+    //     bodyEl.classList.add(Theme.DARK); 
+    // } else {
+    //     bodyEl.classList.replace(Theme.DARK, Theme.LIGHT);
+    // }
+
+    bodyEl.classList.toggle(Theme.DARK);
 
     const theme = checked ? Theme.DARK : Theme.LIGHT; // создаем переменную выбранной темы в зависимости от checked
     localStorage.setItem('StorageTheme', theme); // записываем выбранную тему в localStorage
